@@ -1,0 +1,1 @@
+const datosGenerales = Array("Conde Conde Ismael", "ET1", 20);

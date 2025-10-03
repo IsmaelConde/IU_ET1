@@ -94,10 +94,10 @@ class Data_Test {
                 
                     var nombrecampo = clave;
                     var valorcampo = pruebas[i][5][j][nombrecampo];
-
-                    console.log(nombrecampo);
                     
                     document.getElementById(nombrecampo).value = valorcampo;
+
+                    console.log(document.getElementById(nombrecampo), document.getElementById(nombrecampo).value);
 
                 }
 

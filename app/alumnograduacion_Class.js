@@ -152,8 +152,25 @@ class alumnograduacion extends Validations{
 		let campo = "alumnograduacion_login";
 		let devolver = campo;
 
+		//console.log("El contenido: \"" + document.getElementById(campo).value + "\"", this.format(campo,/^\s/));
+
 		if(!(this.min_size(campo, 4))){
 			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/^\s/)){ // Para detectar espacios al principio
+			devolver += "_space_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\s$/)){ // Para detectar espacios al final
+			devolver += "_space_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\S\s+\S/)){ // Para detectar espacios en medio
+			devolver += "_space_KO"
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;
 		}
@@ -182,6 +199,21 @@ class alumnograduacion extends Validations{
 
 		if(!(this.min_size(campo, 4))){
 			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/^\s/)){ // Para detectar espacios al principio
+			devolver += "_space_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\s$/)){ // Para detectar espacios al final
+			devolver += "_space_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\S\s+\S/)){ // Para detectar espacios en medio
+			devolver += "_space_KO"
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;
 		}
@@ -225,6 +257,10 @@ class alumnograduacion extends Validations{
 		}
 
 		return true;
+	}
+
+	ADD_nuevo_foto_alumnograduacion_validation(){
+
 	}
 
 	/**

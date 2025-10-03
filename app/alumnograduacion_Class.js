@@ -86,8 +86,13 @@ class alumnograduacion extends Validations{
         super();
         this.#parseador = new DOMParser(); // Para que a partir de un string html obtenga sus elementos
         this.#peticiones_back = new ExternalAccess();
+
+		this.columnasamostrar = ['dni','nombre_persona', 'foto_persona'];
+		this.mostrarespecial = ['foto_persona'];
         this.#nombreentidad = "alumnograduacion";
+
         this.#datos_insertados = new Array();
+        this.dom = new dom();
     }
 
     prepareForm(action){
@@ -157,7 +162,7 @@ class alumnograduacion extends Validations{
         .then((respuesta) => {
             switch(action){
                 case "SEARCH":
-                    
+                    this.mostrarResultados(respuesta);
                     break;
                 case "ADD":
                     if(respuesta["ok"] == true && respuesta["code"] == "SQL_OK"){ // Se ha agregado correctamente
@@ -208,8 +213,116 @@ class alumnograduacion extends Validations{
     }
 
     ADD_fotoacto_validation(){
-        
+
     }
 
     /* FIN VALIDACIONES */
+
+    mostrarResultados(respuesta){
+        console.log("Respuesta", respuesta);
+        this.datos = respuesta['resource'];
+        this.atributos = Object.keys(this.datos[0]);
+
+        if (respuesta['code'] == 'RECORDSET_DATOS'){
+            //crear la tabla de datos de la entidad del back
+            this.crearTablaDatos(this.datos, this.mostrarespecial);
+            //rellenar el select de columnas a mostrar
+            //this.crearSeleccionablecolumnas(this.columnasamostrar, this.atributos);
+            //this.mostrarocultarcolumnas();
+        }
+        else{
+            document.getElementById("id_tabla_datos").style.display = 'block';
+            document.getElementById('muestradatostabla').innerHTML = '';
+            document.getElementById('muestradatostabla').className = 'RECORDSET_VACIO';
+        }
+    }
+
+    crearTablaDatos(datos, mostrarespecial){
+		
+		var misdatos = datos;
+		/*
+		recorrer todas las filas de datos y cada atributo para si tiene una funcion de transformación de valor modificarlo en el momento
+		*/
+		for (var i=0;i<misdatos.length;i++){
+			for (var clave in misdatos[i]){
+					if (clave in mostrarespecial){
+						//misdatos[i][clave] = this.cambiarmostrarespecial(clave, misdatos[i][clave]);
+					}
+			}
+		}
+		// proceso los datos de la tabla para incluir en cada fila los tres botones conectados a createForm_ACCION()
+		for (var i=0;i<misdatos.length;i++){
+			
+			var linedit = `<img id='botonEDIT' src='./iconos/EDIT.png' onclick='entidad.createForm_EDIT(`+JSON.stringify(misdatos[i])+`);'>`;
+			var lindelete = `<img id='botonDELETE' src='./iconos/DELETE.png' onclick='entidad.createForm_DELETE(`+JSON.stringify(misdatos[i])+`);'>`;
+			var linshowcurrent = `<img id='botonSHOWCURRENT' src='./iconos/SHOWCURRENT.png' onclick='entidad.createForm_SHOWCURRENT(`+JSON.stringify(misdatos[i])+`);'>`;
+			misdatos[i]['EDIT'] = linedit;
+			misdatos[i]['DELETE'] = lindelete;
+			misdatos[i]['SHOWCURRENT'] = linshowcurrent;
+
+		}
+		
+		//muestro datos en tabla
+		this.dom.showData('IU_manage_table', misdatos);
+		this.mostrarocultarcolumnas();
+		this.crearSeleccionablecolumnas(this.columnasamostrar, this.atributos);
+	}
+
+    mostrarocultarcolumnas(){
+
+		var estadodisplay = '';
+		// recorro todos los atributos de la tabla
+		for (let columna of this.atributos){
+			// si el atributo esta en columnas a mostrar 
+			// lo dejo como esta
+			if (this.columnasamostrar.includes(columna)){
+				estadodisplay = '';
+			}
+			// si el atributo no esta en columnas a mostrar lo oculto
+			else{
+				estadodisplay = 'none';
+			}
+			document.querySelector("th[class='tabla-th-"+columna+"']").style.display = estadodisplay;
+			let arraytds = document.querySelectorAll("td[class='tabla-td-"+columna+"']");
+			for (let i=0;i<arraytds.length;i++){
+				arraytds[i].style.display = estadodisplay;
+			}
+		}
+	}
+
+    crearSeleccionablecolumnas(columnasamostrar,atributos){
+
+		document.getElementById("seleccioncolumnas").innerHTML = '';
+		
+		for (let atributo of atributos){
+
+			var optionselect = document.createElement('option');
+			optionselect.className = atributo;
+			optionselect.innerHTML = atributo;
+			var textofuncion = "entidad.modificarcolumnasamostrar('"+atributo+"');";
+			optionselect.setAttribute("onclick",textofuncion);
+			if (columnasamostrar.includes(atributo)){
+				optionselect.selected = true;
+			}
+			document.getElementById("seleccioncolumnas").append(optionselect);
+		}
+		//setLang();
+
+	}
+
+    modificarcolumnasamostrar(atributo){
+
+		if (this.columnasamostrar.includes(atributo)){
+			// borrar ese atributo
+			this.columnasamostrar = this.columnasamostrar.filter(columna => columna != atributo);
+		}
+		else{
+			// añadir
+			this.columnasamostrar.push(atributo);
+		}
+		
+		this.mostrarocultarcolumnas();
+		this.crearSeleccionablecolumnas(this.columnasamostrar, this.atributos);
+
+	}
 }

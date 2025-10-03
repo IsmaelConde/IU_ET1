@@ -21,6 +21,9 @@
     -->
     <script type="text/javascript" src="./js/index.js"></script>
     <!-- Fin main -->
+     <!-- clases dom -->
+	<script type="text/javascript" src="./Core/Dom_table_Class.js"></script>
+	<script type="text/javascript" src="./Core/Dom_Class.js"></script>
      <!-- este es el script que carga las librerias ajax que usamos para acceder al back -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -29,9 +32,16 @@
         <img id="botonADD" src="./iconos/ADD.png" onclick="entidad.createForm_ADD();" />
         <img id="botonSEARCH" src="./iconos/SEARCH.png" onclick="entidad.createForm_SEARCH();"/>
         <img id="botonEDIT" src="./iconos/EDIT.png" onclick="entidad.createForm_EDIT()" />
+
+        <label id="label_seleccioncolumnas">Columnas</label>
+				<select id="seleccioncolumnas" multiple>
+				</select>
     </div>
     <section id="insert_form">
         <!--Zona donde se inyectará el html-->
+    </section>
+    <section id="IU_manage_table">
+        <!-- Zona donde se inyectará la tabla de resultados-->
     </section>
 </body>
 </html>

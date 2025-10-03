@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET1</title>
+    <!-- Clase -->
+    <script type="text/javascript" src="./Core/Validations_Class.js"></script>
+    <script type="text/javascript" src="./app/alumnograduacion_Class.js"></script>
+    <script type="text/javascript" src="./Core/ExternalAccess_class.js"></script>
+    <!-- 
+        Fin clase 
+        ----------
+        Definicion Tests
+    -->
+    <script type="text/javascript" src="./app/ET1_alumnograduacion_infotest.js"></script>
+    <!--
+        Fin definición tests
+        --------------------
+        main
+    -->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!-- Fin main -->
+     <!-- este es el script que carga las librerias ajax que usamos para acceder al back -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="select_action">
+        <img id="botonADD" src="./iconos/ADD.png" onclick="entidad.createForm_ADD();" />
+        <img id="botonSEARCH" src="./iconos/SEARCH.png" onclick="entidad.createForm_SEARCH();"/>
+        <img id="botonEDIT" src="./iconos/EDIT.png" onclick="entidad.createForm_EDIT()" />
+    </div>
+    <section id="insert_form">
+        <!--Zona donde se inyectará el html-->
+    </section>
+</body>
+</html>

@@ -8,7 +8,7 @@ const alumnograduacion_def_tests = Array(
     Array("alumnograduacion", "alumnograduacion_login", 1, "Cumple tamaño mínimo 4", false, "login__min_size__KO", "Error de tamaño mínimo. Debe tener como mínimo 4 caracteres." ),
 
     //Campo = `alumnograduacion_password` varchar(64) NOT NULL DEFAULT (min: 8, max: 100)
-    Test("alumnograduacion", "alumnograduacion_password", 2, "Cumple tamaño mínimo 8", false, "password__min_size__KO", "Error de tamaño mínimo. Debe tener como mínimo 8 caracteres." )
+    Array("alumnograduacion", "alumnograduacion_password", 2, "Cumple tamaño mínimo 8", false, "password__min_size__KO", "Error de tamaño mínimo. Debe tener como mínimo 8 caracteres." )
 
     //Campo = `alumnograduacion_nombre` varchar(25) NOT NULL DEFAULT (min: 2, max: 25)
 
@@ -33,25 +33,3 @@ const alumnograduacion_tests_fields = Array();
 
 // Pruebas test para files
 const alumnograduacion_tests_files = Array();
-
-class Test{
-    /**
-     * 
-     * @param {String} entidad 
-     * @param {String} campo 
-     * @param {Number} numero 
-     * @param {String} descripcion 
-     * @param {Boolean} resultado_esperado 
-     * @param {String} codigo_respuesta 
-     * @param {String} mensaje_respuesta 
-     */
-    constructor(entidad, campo, numero, descripcion, resultado_esperado, codigo_respuesta, mensaje_respuesta){
-        this.entidad = entidad;
-        this.campo = campo;
-        this.numero = numero;
-        this.descripcion = descripcion;
-        this.resultado_esperado = resultado_esperado;
-        this.codigo_respuesta = codigo_respuesta;
-        this.mensaje_respuesta = mensaje_respuesta;
-    }
-}

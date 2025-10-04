@@ -116,9 +116,9 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_telefono" ><a id="error_alumnograduacion_telefono"></a></span>
 
         <br>
-        <label class="label_direccion">Dirección</label>
+        <label class="label_alumnograduacion_direccion">Dirección</label>
         <input type='text' id='alumnograduacion_direccion' name='alumnograduacion_direccion' onblur=" return entidad.ADD_direccion_validation()"></input>
-        <span id="span_error_direccion" ><a id="error_direccion"></a></span>
+        <span id="span_error_alumnograduacion_direccion" ><a id="error_alumnograduacion_direccion"></a></span>
 
         <br>
         <label class="label_email">Email</label>
@@ -660,6 +660,73 @@ class alumnograduacion extends Validations{
 		}
 
 		if(!this.format(campo,/^[0-9]+$/)){ // Por si el contenido NO es solo números
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	ADD_alumnograduacion_direccion_validation(){
+		let campo = "alumnograduacion_direccion";
+		let devolver = campo;
+
+		
+		if(this.format(campo,/^\s*$/)){ // Por si está vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,100))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/[<>{}\[\]\(\)"'`~^|\\\/*=+%$€@!?;:_]/)){ // Por si contiene < > { } [ ] ( ) " ' ` ~ ^ | \ / * = + % $ € @ ! ? ; : _
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	EDIT_alumnograduacion_direccion_validation(){
+		let campo = "alumnograduacion_direccion";
+		let devolver = campo;
+
+		if(this.format(campo,/^\s*$/)){ // Por si está vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,100))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(this.format(campo,/[<>{}\[\]\(\)"'`~^|\\\/*=+%$€@!?;:_]/)){ // Por si contiene < > { } [ ] ( ) " ' ` ~ ^ | \ / * = + % $ € @ ! ? ; : _
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	SEARCH_alumnograduacion_direccion_validation(){
+		let campo = "alumnograduacion_direccion";
+		let devolver = campo;
+		
+		if(!(this.max_size(campo,100))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(this.format(campo,/[<>{}\[\]\(\)"'`~^|\\\/*=+%$€@!?;:_]/)){ // Por si contiene < > { } [ ] ( ) " ' ` ~ ^ | \ / * = + % $ € @ ! ? ; : _
 			devolver += "_format_KO";
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;

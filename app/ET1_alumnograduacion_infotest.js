@@ -131,6 +131,30 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_telefono',81,'cumple formato','SEARCH','alumnograduacion_telefono_format_KO','Formato invalido, solo se permiten números'],
     ['alumnograduacion','alumnograduacion_telefono',82,'es correcto','SEARCH',true,'alumnograduacion_telefono (SEARCH) correcto'],
     
+  // Campo = `alumnograduacion_direccion` varchar(100) NOT NULL DEFAULT (alfa-numerico con acentos y ñ y espacios. Max: 100)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_direccion',83,'vacio','ADD','alumnograduacion_direccion_vacio_KO','No puede quedar vacío'],
+    ['alumnograduacion','alumnograduacion_direccion',84,'cumple tamaño maximo','ADD','alumnograduacion_direccion_max_size_KO','Tamaño muy largo. Lo máximo son 100 caracteres'],
+    ['alumnograduacion','alumnograduacion_direccion',85,'cumple formato','ADD','alumnograduacion_direccion_format_KO','No se permiten caracteres raros'],
+    ['alumnograduacion','alumnograduacion_direccion',86,'es correcto','ADD',true,'alumnograduacion_direccion (ADD) correcto'],
+
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_direccion',87,'vacio','EDIT','alumnograduacion_direccion_vacio_KO','No puede quedar vacío'],
+    ['alumnograduacion','alumnograduacion_direccion',88,'cumple tamaño maximo','EDIT','alumnograduacion_direccion_max_size_KO','Tamaño muy largo. Lo máximo son 100 caracteres'],
+    ['alumnograduacion','alumnograduacion_direccion',89,'cumple formato','EDIT','alumnograduacion_direccion_format_KO','No se permiten caracteres raros'],
+    ['alumnograduacion','alumnograduacion_direccion',90,'es correcto','EDIT',true,'alumnograduacion_direccion (EDIT) correcto'],
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_direccion',91,'cumple tamaño maximo','SEARCH','alumnograduacion_direccion_max_size_KO','Tamaño muy largo. Lo máximo son 100 caracteres'],
+    ['alumnograduacion','alumnograduacion_direccion',92,'cumple formato','SEARCH','alumnograduacion_direccion_format_KO','No se permiten caracteres raros'],
+    ['alumnograduacion','alumnograduacion_direccion',93,'es correcto','SEARCH',true,'alumnograduacion_direccion (SEARCH) correcto'],
+
+  // Campo = `alumnograduacion_email` varchar(40) NOT NULL DEFAULT (formato email. Max: 40)
+
+
+  // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
+
+
   /*
     // ficheros
     Array('alumnograduacion','nuevo_foto_alumnograduacion',11,'existe fichero','ADD','nuevo_foto_alumnograduacion_not_exist_file_KO','El fichero no existe. Debe subir una foto'),
@@ -386,7 +410,33 @@ let alumnograduacion_tests_fields = Array(
     ['alumnograduacion','alumnograduacion_telefono',82,185,'SEARCH',[{alumnograduacion_telefono:'123456789'}],true],
     ['alumnograduacion','alumnograduacion_telefono',82,186,'SEARCH',[{alumnograduacion_telefono:'1234'}],true],
 
-  // 
+  // Campo = `alumnograduacion_direccion` varchar(100) NOT NULL DEFAULT (alfa-numerico con acentos y ñ y espacios. Max: 100)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_direccion',83,187,'ADD',[{alumnograduacion_direccion:''}],'alumnograduacion_direccion_vacio_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',84,188,'ADD',[{alumnograduacion_direccion:'a'.repeat(110)}],'alumnograduacion_direccion_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',85,189,'ADD',[{alumnograduacion_direccion:'direccion * calle'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',85,190,'ADD',[{alumnograduacion_direccion:'?'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',86,191,'ADD',[{alumnograduacion_direccion:'Avd Otero Pedrayo nº30, 2ºC'}],true],
+
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_direccion',87,192,'EDIT',[{alumnograduacion_direccion:''}],'alumnograduacion_direccion_vacio_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',88,193,'EDIT',[{alumnograduacion_direccion:'a'.repeat(110)}],'alumnograduacion_direccion_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',89,194,'EDIT',[{alumnograduacion_direccion:'direccion * calle'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',89,195,'EDIT',[{alumnograduacion_direccion:'?'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',90,196,'EDIT',[{alumnograduacion_direccion:'Avd Otero Pedrayo nº30, 2ºC'}],true],
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_direccion',91,197,'SEARCH',[{alumnograduacion_direccion:'a'.repeat(110)}],'alumnograduacion_direccion_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',92,198,'SEARCH',[{alumnograduacion_direccion:'direccion * calle'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',92,199,'SEARCH',[{alumnograduacion_direccion:'?'}],'alumnograduacion_direccion_format_KO'],
+    ['alumnograduacion','alumnograduacion_direccion',93,200,'SEARCH',[{alumnograduacion_direccion:'Avd Otero Pedrayo nº30, 2ºC'}],true],
+    ['alumnograduacion','alumnograduacion_direccion',93,201,'SEARCH',[{alumnograduacion_direccion:'Ot Pe, nº2'}],true],
+
+  // Campo = `alumnograduacion_email` varchar(40) NOT NULL DEFAULT (formato email. Max: 40)
+
+
+
+  // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
 );  
 /*
 la entidad, 

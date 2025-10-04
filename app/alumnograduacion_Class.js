@@ -111,9 +111,9 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_dni" ><a id="error_alumnograduacion_dni"></a></span>
         
         <br>
-        <label class="label_telefono">Teefono</label>
+        <label class="label_alumnograduacion_telefono">Teefono</label>
         <input type='text' id='alumnograduacion_telefono' name='alumnograduacion_telefono' onblur=" return entidad.ADD_telefono_validation()"></input>
-        <span id="span_error_telefono" ><a id="error_telefono"></a></span>
+        <span id="span_error_alumnograduacion_telefono" ><a id="error_alumnograduacion_telefono"></a></span>
 
         <br>
         <label class="label_direccion">Dirección</label>
@@ -599,14 +599,78 @@ class alumnograduacion extends Validations{
 		return true;
 	}
 
+	ADD_alumnograduacion_telefono_validation(){
+		let campo = "alumnograduacion_telefono";
+		let devolver = campo;
+
+		if(!(this.min_size(campo,9))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!this.format(campo,/^[0-9]+$/)){ // Por si el contenido NO es solo números
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	EDIT_alumnograduacion_telefono_validation(){
+		let campo = "alumnograduacion_telefono";
+		let devolver = campo;
+
+		if(!(this.min_size(campo,9))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!this.format(campo,/^[0-9]+$/)){ // Por si el contenido NO es solo números
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	SEARCH_alumnograduacion_telefono_validation(){
+		let campo = "alumnograduacion_telefono";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!this.format(campo,/^[0-9]+$/)){ // Por si el contenido NO es solo números
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
 	ADD_nuevo_foto_alumnograduacion_validation(){
 
 	}
-
-	/**
-	 * Recursos
-	 */
-	
 
 	/** Antiguo de aquí pa bajo
 	/** 
@@ -695,10 +759,6 @@ class alumnograduacion extends Validations{
 
 	}
 
-	ADD_apellidos_alumnograduacion_validation(){
-		
-	}
-
 	/**
 		
 		@param 
@@ -751,7 +811,9 @@ class alumnograduacion extends Validations{
 
 
 	}
-	 FIN ANTIGUO */
+	FIN ANTIGUO */
+
+
 	/**
 	 * 
 	 * test dni format in the regular expression

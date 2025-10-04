@@ -111,9 +111,25 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_dni',68,'cumple formato dni o nie','SEARCH','alumnograduacion_dni_format_KO','Formato invalido, no es ni NIE ni DNI'],
     ['alumnograduacion','alumnograduacion_dni',69,'cumple formato dni','SEARCH','alumnograduacion_dni_dni_validate_KO','Formato DNI inválido. Formato: 8 números + 1 letra'],
     ['alumnograduacion','alumnograduacion_dni',70,'cumple formato nie','SEARCH','alumnograduacion_dni_nie_validate_KO','Formato NIE inválido. Formato: 1 letra + 7 números + 1 letra'],
-    ['alumnograduacion','alumnograduacion_dni',71,'es correcto','EDIT',true, 'alumnograduacion_dni (SEARCH) correcto'],
+    ['alumnograduacion','alumnograduacion_dni',71,'es correcto','SEARCH',true, 'alumnograduacion_dni (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_telefono` varchar(9) NOT NULL DEFAULT (9 dígitos(0 - 9). Min: 9, Max: 9)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_telefono',72,'cumple tamaño minimo','ADD','alumnograduacion_telefono_min_size_KO','Tamaño muy corto. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_telefono',73,'cumple tamaño maximo','ADD','alumnograduacion_telefono_max_size_KO','Tamaño muy largo. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_telefono',74,'cumple formato','ADD','alumnograduacion_telefono_format_KO','Formato invalido, solo se permiten números'],
+    ['alumnograduacion','alumnograduacion_telefono',75,'es correcto','ADD',true,'alumnograduacion_telefono (ADD) correcto'],
+
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_telefono',76,'cumple tamaño minimo','EDIT','alumnograduacion_telefono_min_size_KO','Tamaño muy corto. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_telefono',77,'cumple tamaño maximo','EDIT','alumnograduacion_telefono_max_size_KO','Tamaño muy largo. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_telefono',78,'cumple formato','EDIT','alumnograduacion_telefono_format_KO','Formato invalido, solo se permiten números'],
+    ['alumnograduacion','alumnograduacion_telefono',79,'es correcto','EDIT',true,'alumnograduacion_telefono (EDIT) correcto'],
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_telefono',80,'cumple tamaño maximo','SEARCH','alumnograduacion_telefono_max_size_KO','Tamaño muy largo. Como máximo 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_telefono',81,'cumple formato','SEARCH','alumnograduacion_telefono_format_KO','Formato invalido, solo se permiten números'],
+    ['alumnograduacion','alumnograduacion_telefono',82,'es correcto','SEARCH',true,'alumnograduacion_telefono (SEARCH) correcto'],
     
   /*
     // ficheros
@@ -349,8 +365,29 @@ let alumnograduacion_tests_fields = Array(
     ['alumnograduacion','alumnograduacion_dni',71,170,'SEARCH',[{alumnograduacion_dni:'Y76543'}],true], // substring nie
 
   // Campo = `alumnograduacion_telefono` varchar(9) NOT NULL DEFAULT (9 dígitos(0 - 9). Min: 9, Max: 9)
+    // Action ADD
+    ['alumnograduacion','alumnograduacion_telefono',72,172,'ADD',[{alumnograduacion_telefono:'12654'}],'alumnograduacion_telefono_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',73,173,'ADD',[{alumnograduacion_telefono:'1234567890'}],'alumnograduacion_telefono_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',74,174,'ADD',[{alumnograduacion_telefono:'textooooo'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',74,175,'ADD',[{alumnograduacion_telefono:'texto1234'}],'alumnograduacion_telefono_format_KO'], // para probar numeros con texto
+    ['alumnograduacion','alumnograduacion_telefono',75,176,'ADD',[{alumnograduacion_telefono:'123456789'}],true],
 
-);
+    // Action EDIT
+    ['alumnograduacion','alumnograduacion_telefono',76,177,'EDIT',[{alumnograduacion_telefono:'12654'}],'alumnograduacion_telefono_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',77,178,'EDIT',[{alumnograduacion_telefono:'1234567890'}],'alumnograduacion_telefono_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',78,179,'EDIT',[{alumnograduacion_telefono:'textooooo'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',78,180,'EDIT',[{alumnograduacion_telefono:'texto1234'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',79,181,'EDIT',[{alumnograduacion_telefono:'123456789'}],true],
+
+    // Action SEARCH
+    ['alumnograduacion','alumnograduacion_telefono',80,182,'SEARCH',[{alumnograduacion_telefono:'1234567890'}],'alumnograduacion_telefono_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',81,183,'SEARCH',[{alumnograduacion_telefono:'text'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',81,184,'SEARCH',[{alumnograduacion_telefono:'12T'}],'alumnograduacion_telefono_format_KO'],
+    ['alumnograduacion','alumnograduacion_telefono',82,185,'SEARCH',[{alumnograduacion_telefono:'123456789'}],true],
+    ['alumnograduacion','alumnograduacion_telefono',82,186,'SEARCH',[{alumnograduacion_telefono:'1234'}],true],
+
+  // 
+);  
 /*
 la entidad, 
 el campo, 

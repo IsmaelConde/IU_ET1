@@ -74,24 +74,24 @@ class alumnograduacion extends Validations{
 		var form_content = `
 			<form action="http://193.147.87.202/procesaform.php" method="POST" enctype="multipart/form-data" onsubmit="return entidad.ADD_submit_alumnograduacion();">
 
-			<label class="label_login">Login</label>
+			<label class="label_alumnograduacion_login">Login</label>
         <input type='text' id='alumnograduacion_login' name='alumnograduacion_login' onblur=" return entidad.ADD_login_validation();"></input>
         <span id="span_error_alumnograduacion_login"><a id="error_alumnograduacion_login"></a></span>
         <br>
         
-        <label class="label_password">Password</label>
+        <label class="label_alumnograduacion_password">Password</label>
         <input type='text' id='alumnograduacion_password' name='alumnograduacion_password' onblur=" return entidad.ADD_password_validation();"></input>
-        <span id="span_error_password" ><a id="error_password"></a></span>
+        <span id="span_error_alumnograduacion_password" ><a id="error_alumnograduacion_password"></a></span>
         <br>
         
-        <label class="label_nombre">Nombre</label>
+        <label class="label_alumnograduacion_nombre">Nombre</label>
         <input type='text' id='alumnograduacion_nombre' name='alumnograduacion_nombre' onblur=" return entidad.ADD_nombre_validation()"></input>
-        <span id="span_error_nombre" ><a id="error_apellidos_persona"></a></span>
+        <span id="span_error_alumnograduacion_nombre" ><a id="error_alumnograduacion_nombre"></a></span>
         <br>
         
-        <label class="label_apellidos">Apellidos</label>
+        <label class="label_alumnograduacion_apellidos">Apellidos</label>
         <input type='text' id='alumnograduacion_apellidos' name='alumnograduacion_apellidos' onblur=" return entidad.ADD_apellidos_validation()"></input>
-        <span id="span_error_apellidos" ><a id="error_apellidos"></a></span>
+        <span id="span_error_alumnograduacion_apellidos" ><a id="error_alumnograduacion_apellidos"></a></span>
         
         <br>
         <label class="label_titulacion">Titulación</label>
@@ -103,7 +103,7 @@ class alumnograduacion extends Validations{
             <option value="MIA">MIA</option>
             <option value="PCEO">PCEO</option>
         </select>
-        <span id="span_error_titulacion" ><a id="error_titulacion"></a></span>
+        <span id="span_error_alumnograduacion_titulacion" ><a id="error_alumnograduacion_titulacion"></a></span>
         <br>
 
         <label class="label_dni">Dni</label>
@@ -251,6 +251,273 @@ class alumnograduacion extends Validations{
 			return devolver;
 		}
 		if(this.format(campo, /[áéíóúÁÉÍÓÚüÜñÑ]/)){ // Por si encuentra un acento o una ñ
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	ADD_alumnograduacion_password_validation(){
+		let campo = "alumnograduacion_password";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 8))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,64))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo, /[áéíóúÁÉÍÓÚüÜñÑ]/)){ // Por si encuentra un acento o una ñ
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	EDIT_alumnograduacion_password_validation(){
+		let campo = "alumnograduacion_password";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 8))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,64))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo, /[áéíóúÁÉÍÓÚüÜñÑ]/)){ // Por si encuentra un acento o una ñ
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	SEARCH_alumnograduacion_password_validation(){
+		let campo = "alumnograduacion_password";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,64))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo, /[áéíóúÁÉÍÓÚüÜñÑ]/)){ // Por si encuentra un acento o una ñ
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	ADD_alumnograduacion_nombre_validation(){
+		let campo = "alumnograduacion_nombre";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 2))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,25))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	EDIT_alumnograduacion_nombre_validation(){
+		let campo = "alumnograduacion_nombre";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 2))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,25))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	SEARCH_alumnograduacion_nombre_validation(){
+		let campo = "alumnograduacion_nombre";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,25))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	ADD_alumnograduacion_apellidos_validation(){
+		let campo = "alumnograduacion_apellidos";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 2))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,35))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	EDIT_alumnograduacion_apellidos_validation(){
+		let campo = "alumnograduacion_apellidos";
+		let devolver = campo;
+
+		if(!(this.min_size(campo, 2))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,35))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	SEARCH_alumnograduacion_apellidos_validation(){
+		let campo = "alumnograduacion_apellidos";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,35))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(this.format(campo,/\d/)){ // Por si encuentra un número
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	ADD_alumnograduacion_titulacion_validation(){
+		let campo = "alumnograduacion_titulacion";
+		let devolver = campo;
+
+		if(this.format(campo,/^\s*$/)){ // Por si el contenido es vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		const valoresPosibles = ["GREI", "GRIA", "MEI", "MIA", "PCEO"];
+		if(!this.format(campo, new RegExp(valoresPosibles.join("|")))){ // Si no contiene esos valores, no es sensible a mayusculas
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	EDIT_alumnograduacion_titulacion_validation(){
+		let campo = "alumnograduacion_titulacion";
+		let devolver = campo;
+
+		if(this.format(campo,/^$/)){ // Por si el contenido es vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		const valoresPosibles = ["GREI", "GRIA", "MEI", "MIA", "PCEO"];
+		if(!this.format(campo, new RegExp(valoresPosibles.join("|")))){ // Si no contiene esos valores, no es sensible a mayusculas
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		return true;
+	}
+
+	SEARCH_alumnograduacion_titulacion_validation(){
+		let campo = "alumnograduacion_titulacion";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,5))){
+			devolver += "_max_size_KO"
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		const valoresPosibles = ["GREI", "GRIA", "MEI", "MIA", "PCEO"];
+		if(!this.format(campo, new RegExp(valoresPosibles.join("|"), "i"))){ // Si no contiene esos valores, no es sensible a mayusculas
 			devolver += "_format_KO";
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;

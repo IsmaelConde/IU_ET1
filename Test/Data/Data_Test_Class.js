@@ -97,6 +97,8 @@ class Data_Test {
                     
                     document.getElementById(nombrecampo).value = valorcampo;
 
+                    console.log(valorcampo);
+
                     console.log(document.getElementById(nombrecampo), document.getElementById(nombrecampo).value);
 
                 }

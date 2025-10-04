@@ -6,90 +6,114 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion', 'alumnograduacion_login',2,'no contiene espacios','ADD', 'alumnograduacion_login_space_KO', 'No se permite espacios'],
     Array('alumnograduacion','alumnograduacion_login',3,'cumple tamaño maximo','ADD','alumnograduacion_login_max_size_KO','Tamaño muy grande. Debe estar entre 4 y 15 caracteres'),
     Array('alumnograduacion','alumnograduacion_login',4,'cumple formato','ADD','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_login',5,'es correcto','ADD',true,'Login alumnograduacion_login (ADD) correcto'),
+    Array('alumnograduacion','alumnograduacion_login',5,'es correcto','ADD',true,'alumnograduacion_login (ADD) correcto'),
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_login',6,'cumple tamaño minimo','EDIT','alumnograduacion_login_min_size_KO','Tamaño muy corto. Debe estar entre 4 y 15 caracteres'],
     ['alumnograduacion', 'alumnograduacion_login',7,'no contiene espacios','ADD', 'alumnograduacion_login_space_KO', 'No se permite espacios'],
     ['alumnograduacion','alumnograduacion_login',8,'cumple tamaño maximo','EDIT','alumnograduacion_login_max_size_KO','Tamaño muy grande. Debe estar entre 4 y 15 caracteres'],
     ['alumnograduacion','alumnograduacion_login',9,'cumple formato','EDIT','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'],
-    ['alumnograduacion','alumnograduacion_login',10,'es correcto','EDIT',true,'Login alumnograduacion_login (EDIT) correcto'],
+    ['alumnograduacion','alumnograduacion_login',10,'es correcto','EDIT',true,'alumnograduacion_login (EDIT) correcto'],
 
     // Action: SEARCH
     Array('alumnograduacion','alumnograduacion_login',11,'cumple tamaño maximo','SEARCH','alumnograduacion_login_max_size_KO','Tamaño muy grande. Como máximo 15 caracteres'),
     Array('alumnograduacion','alumnograduacion_login',12,'cumple formato','SEARCH','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_login',13,'es correcto','SEARCH',true,'Login alumnograduacion_login (SEARCH) correcto'),
+    Array('alumnograduacion','alumnograduacion_login',13,'es correcto','SEARCH',true,'alumnograduacion_login (SEARCH) correcto'),
 
   // Campo = `alumnograduacion_password` varchar(64) NOT NULL DEFAULT (min: 8, max: 64)
     // Action: ADD
     Array('alumnograduacion','alumnograduacion_password',14,'cumple tamaño minimo','ADD','alumnograduacion_password_min_size_KO','Tamaño muy corto. Debe estar entre 8 y 64 caracteres'),
     Array('alumnograduacion','alumnograduacion_password',15,'cumple tamaño maximo','ADD','alumnograduacion_password_max_size_KO','Tamaño muy grande. Debe estar entre 8 y 64 caracteres'),
     Array('alumnograduacion','alumnograduacion_password',16,'cumple formato','ADD','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_password',17,'es correcto','ADD',true,'Login alumnograduacion_password (ADD) correcto'),
+    Array('alumnograduacion','alumnograduacion_password',17,'es correcto','ADD',true,'alumnograduacion_password (ADD) correcto'),
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_password',18,'cumple tamaño minimo','EDIT','alumnograduacion_password_min_size_KO','Tamaño muy corto. Debe estar entre 8 y 64 caracteres'],
     ['alumnograduacion','alumnograduacion_password',19,'cumple tamaño maximo','EDIT','alumnograduacion_password_max_size_KO','Tamaño muy grande. Debe estar entre 8 y 64 caracteres'],
     ['alumnograduacion','alumnograduacion_password',20,'cumple formato','EDIT','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'],
-    ['alumnograduacion','alumnograduacion_password',21,'es correcto','EDIT',true,'Login alumnograduacion_password (EDIT) correcto'],
+    ['alumnograduacion','alumnograduacion_password',21,'es correcto','EDIT',true,'alumnograduacion_password (EDIT) correcto'],
 
     // Action: SEARCH
     Array('alumnograduacion','alumnograduacion_password',22,'cumple tamaño maximo','SEARCH','alumnograduacion_password_max_size_KO','Tamaño muy grande. Como máximo 64 caracteres'),
     Array('alumnograduacion','alumnograduacion_password',23,'cumple formato','SEARCH','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_password',24,'es correcto','SEARCH',true,'Login alumnograduacion_password (SEARCH) correcto'),
+    Array('alumnograduacion','alumnograduacion_password',24,'es correcto','SEARCH',true,'alumnograduacion_password (SEARCH) correcto'),
   
   // Campo = `alumnograduacion_nombre` varchar(25) NOT NULL DEFAULT (min: 2, max: 25)
     // Action: ADD
     Array('alumnograduacion','alumnograduacion_nombre',25,'cumple tamaño minimo','ADD','alumnograduacion_nombre_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 25 caracteres'),
     Array('alumnograduacion','alumnograduacion_nombre',26,'cumple tamaño maximo','ADD','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 25 caracteres'),
     Array('alumnograduacion','alumnograduacion_nombre',27,'cumple formato','ADD','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_nombre',28,'es correcto','ADD',true,'Login alumnograduacion_nombre (ADD) correcto'),
+    Array('alumnograduacion','alumnograduacion_nombre',28,'es correcto','ADD',true,'alumnograduacion_nombre (ADD) correcto'),
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_nombre',29,'cumple tamaño minimo','EDIT','alumnograduacion_nombre_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 25 caracteres'],
     ['alumnograduacion','alumnograduacion_nombre',30,'cumple tamaño maximo','EDIT','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 25 caracteres'],
     ['alumnograduacion','alumnograduacion_nombre',31,'cumple formato','EDIT','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
-    ['alumnograduacion','alumnograduacion_nombre',32,'es correcto','EDIT',true,'Login alumnograduacion_nombre (EDIT) correcto'],
+    ['alumnograduacion','alumnograduacion_nombre',32,'es correcto','EDIT',true,'alumnograduacion_nombre (EDIT) correcto'],
 
     // Action: SEARCH
     Array('alumnograduacion','alumnograduacion_nombre',33,'cumple tamaño maximo','SEARCH','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Como máximo 25 caracteres'),
     Array('alumnograduacion','alumnograduacion_nombre',34,'cumple formato','SEARCH','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_nombre',35,'es correcto','SEARCH',true,'Login alumnograduacion_nombre (SEARCH) correcto'),
+    Array('alumnograduacion','alumnograduacion_nombre',35,'es correcto','SEARCH',true,'alumnograduacion_nombre (SEARCH) correcto'),
 
   // Campo = `alumnograduacion_apellidos` varchar(35) NOT NULL DEFAULT (min: 2, max: 35)
     // Action: ADD
     Array('alumnograduacion','alumnograduacion_apellidos',36,'cumple tamaño minimo','ADD','alumnograduacion_apellidos_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 35 caracteres'),
     Array('alumnograduacion','alumnograduacion_apellidos',37,'cumple tamaño maximo','ADD','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 35 caracteres'),
     Array('alumnograduacion','alumnograduacion_apellidos',38,'cumple formato','ADD','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_apellidos',39,'es correcto','ADD',true,'Login alumnograduacion_apellidos (ADD) correcto'),
+    Array('alumnograduacion','alumnograduacion_apellidos',39,'es correcto','ADD',true,'alumnograduacion_apellidos (ADD) correcto'),
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_apellidos',40,'cumple tamaño minimo','EDIT','alumnograduacion_apellidos_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 35 caracteres'],
     ['alumnograduacion','alumnograduacion_apellidos',41,'cumple tamaño maximo','EDIT','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 35 caracteres'],
     ['alumnograduacion','alumnograduacion_apellidos',42,'cumple formato','EDIT','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
-    ['alumnograduacion','alumnograduacion_apellidos',43,'es correcto','EDIT',true,'Login alumnograduacion_apellidos (EDIT) correcto'],
+    ['alumnograduacion','alumnograduacion_apellidos',43,'es correcto','EDIT',true,'alumnograduacion_apellidos (EDIT) correcto'],
 
     // Action: SEARCH
     Array('alumnograduacion','alumnograduacion_apellidos',44,'cumple tamaño maximo','SEARCH','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Como máximo 35 caracteres'),
     Array('alumnograduacion','alumnograduacion_apellidos',45,'cumple formato','SEARCH','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_apellidos',46,'es correcto','SEARCH',true,'Login alumnograduacion_apellidos (SEARCH) correcto'),
+    Array('alumnograduacion','alumnograduacion_apellidos',46,'es correcto','SEARCH',true,'alumnograduacion_apellidos (SEARCH) correcto'),
 
   // Campo = `alumnograduacion_titulacion` enum('GREI','GRIA','MEI','MIA','PCEO') NOT NULL DEFAULT 'GREI'
     // Action: ADD
     Array('alumnograduacion','alumnograduacion_titulacion',47,'vacio','ADD','alumnograduacion_titulacion_vacio_KO','No puede estar vacío'),
     Array('alumnograduacion','alumnograduacion_titulacion',48,'cumple formato','ADD','alumnograduacion_titulacion_format_KO','Formatos válidos: "GREI", "GRIA", "MEI", "MIA", "PCEO"'),
-    Array('alumnograduacion','alumnograduacion_titulacion',49,'es correcto','ADD',true,'Login alumnograduacion_titulacion (ADD) correcto'),
+    Array('alumnograduacion','alumnograduacion_titulacion',49,'es correcto','ADD',true,'alumnograduacion_titulacion (ADD) correcto'),
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_titulacion',50,'vacio','EDIT','alumnograduacion_titulacion_vacio_KO','No puede estar vacío'],
     ['alumnograduacion','alumnograduacion_titulacion',51,'cumple formato','EDIT','alumnograduacion_titulacion_format_KO','Formatos válidos: "GREI", "GRIA", "MEI", "MIA", "PCEO"'],
-    ['alumnograduacion','alumnograduacion_titulacion',52,'es correcto','EDIT',true,'Login alumnograduacion_titulacion (EDIT) correcto'],
+    ['alumnograduacion','alumnograduacion_titulacion',52,'es correcto','EDIT',true,'alumnograduacion_titulacion (EDIT) correcto'],
 
     // Action: SEARCH
     Array('alumnograduacion','alumnograduacion_titulacion',53,'cumple tamaño maximo','SEARCH','alumnograduacion_titulacion_max_size_KO','Tamaño muy grande. El máximo es 4'),
-    Array('alumnograduacion','alumnograduacion_titulacion',54,'es correcto','SEARCH',true,'Login alumnograduacion_titulacion (SEARCH) correcto'),
+    Array('alumnograduacion','alumnograduacion_titulacion',54,'es correcto','SEARCH',true,'alumnograduacion_titulacion (SEARCH) correcto'),
 
-  // Campo = `alumnograduacion_dni` varchar(9) NOT NULL DEFAULT (formato dni. Min: 9, Max: 9) -- ESTOY AQUÍ --
+  // Campo = `alumnograduacion_dni` varchar(9) NOT NULL DEFAULT (formato dni. Min: 9, Max: 9)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_dni',55,'cumple tamaño minimo','ADD','alumnograduacion_dni_min_size_KO','Tamaño muy corto. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_dni',56,'cumple formato dni o nie','ADD','alumnograduacion_dni_format_KO','Formato invalido, no es ni NIE ni DNI'],
+    ['alumnograduacion','alumnograduacion_dni',57,'cumple formato dni','ADD','alumnograduacion_dni_dni_validate_KO','Formato DNI inválido. Formato: 8 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',58,'cumple formato nie','ADD','alumnograduacion_dni_nie_validate_KO','Formato NIE inválido. Formato: 1 letra + 7 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',59,'cumple tamaño maximo','ADD','alumnograduacion_dni_max_size_KO','Tamaño muy largo. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_dni',60,'es correcto','ADD',true, 'alumnograduacion_dni (ADD) correcto'],
+
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_dni',61,'cumple tamaño minimo','EDIT','alumnograduacion_dni_min_size_KO','Tamaño muy corto. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_dni',62,'cumple formato dni o nie','EDIT','alumnograduacion_dni_format_KO','Formato invalido, no es ni NIE ni DNI'],
+    ['alumnograduacion','alumnograduacion_dni',63,'cumple formato dni','EDIT','alumnograduacion_dni_dni_validate_KO','Formato DNI inválido. Formato: 8 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',64,'cumple formato nie','EDIT','alumnograduacion_dni_nie_validate_KO','Formato NIE inválido. Formato: 1 letra + 7 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',65,'cumple tamaño maximo','EDIT','alumnograduacion_dni_max_size_KO','Tamaño muy largo. Debe tener 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_dni',66,'es correcto','EDIT',true, 'alumnograduacion_dni (EDIT) correcto'],
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_dni',67,'cumple tamaño maximo','SEARCH','alumnograduacion_dni_max_size_KO','Tamaño muy largo. Como maximo se permiten 9 caracteres'],
+    ['alumnograduacion','alumnograduacion_dni',68,'cumple formato dni o nie','SEARCH','alumnograduacion_dni_format_KO','Formato invalido, no es ni NIE ni DNI'],
+    ['alumnograduacion','alumnograduacion_dni',69,'cumple formato dni','SEARCH','alumnograduacion_dni_dni_validate_KO','Formato DNI inválido. Formato: 8 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',70,'cumple formato nie','SEARCH','alumnograduacion_dni_nie_validate_KO','Formato NIE inválido. Formato: 1 letra + 7 números + 1 letra'],
+    ['alumnograduacion','alumnograduacion_dni',71,'es correcto','EDIT',true, 'alumnograduacion_dni (SEARCH) correcto'],
+
+  // Campo = `alumnograduacion_telefono` varchar(9) NOT NULL DEFAULT (9 dígitos(0 - 9). Min: 9, Max: 9)
     
   /*
     // ficheros
@@ -287,7 +311,45 @@ let alumnograduacion_tests_fields = Array(
     ['alumnograduacion','alumnograduacion_titulacion',53,139,'SEARCH',[{alumnograduacion_titulacion:'aaaaa'}],'alumnograduacion_titulacion_max_size_KO'], // No controlamos acentos o número, ya que en un futuro se puede ampliar y agregar más enumerados que contengan esos caracteres
     ['alumnograduacion','alumnograduacion_titulacion',54,140,'SEARCH',[{alumnograduacion_titulacion:'gr'}],true], // permitir buscar con minusculas
 
-  
+  // Campo = `alumnograduacion_dni` varchar(9) NOT NULL DEFAULT (formato dni. Min: 9, Max: 9)
+    // Action ADD
+    ['alumnograduacion','alumnograduacion_dni',55,141,'ADD',[{alumnograduacion_dni:''}],'alumnograduacion_dni_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',55,142,'ADD',[{alumnograduacion_dni:'1234'}],'alumnograduacion_dni_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',56,143,'ADD',[{alumnograduacion_dni:'123456789'}],'alumnograduacion_dni_format_KO'], // No es ni dni ni nie
+    ['alumnograduacion','alumnograduacion_dni',56,144,'ADD',[{alumnograduacion_dni:'12345A789'}],'alumnograduacion_dni_format_KO'], // Formato dni no valido
+    ['alumnograduacion','alumnograduacion_dni',56,145,'ADD',[{alumnograduacion_dni:'Z1235T597'}],'alumnograduacion_dni_format_KO'], // Formato nie no correcto
+    ['alumnograduacion','alumnograduacion_dni',57,146,'ADD',[{alumnograduacion_dni:'12345678A'}],'alumnograduacion_dni_dni_validate_KO'], // la letra del dni no es correcta
+    ['alumnograduacion','alumnograduacion_dni',58,147,'ADD',[{alumnograduacion_dni:'Z1235159T'}],'alumnograduacion_dni_nie_validate_KO'], // Las letras del nie no pertencen a ese nie
+    ['alumnograduacion','alumnograduacion_dni',59,148,'ADD',[{alumnograduacion_dni:'1234567890'}],'alumnograduacion_dni_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',60,149,'ADD',[{alumnograduacion_dni:'12345678Z'}],true], // Dni correcto
+    ['alumnograduacion','alumnograduacion_dni',60,150,'ADD',[{alumnograduacion_dni:'Y7654321G'}],true], // NIE correcto
+
+    // Action EDIT
+    ['alumnograduacion','alumnograduacion_dni',61,151,'EDIT',[{alumnograduacion_dni:''}],'alumnograduacion_dni_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',61,152,'EDIT',[{alumnograduacion_dni:'1234'}],'alumnograduacion_dni_min_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',62,153,'EDIT',[{alumnograduacion_dni:'123456789'}],'alumnograduacion_dni_format_KO'], // No es ni dni ni nie
+    ['alumnograduacion','alumnograduacion_dni',62,154,'EDIT',[{alumnograduacion_dni:'12345A789'}],'alumnograduacion_dni_format_KO'], // Formato dni no valido
+    ['alumnograduacion','alumnograduacion_dni',62,155,'EDIT',[{alumnograduacion_dni:'Z1235T597'}],'alumnograduacion_dni_format_KO'], // Formato nie no correcto
+    ['alumnograduacion','alumnograduacion_dni',63,156,'EDIT',[{alumnograduacion_dni:'12345678A'}],'alumnograduacion_dni_dni_validate_KO'], // la letra del dni no es correcta
+    ['alumnograduacion','alumnograduacion_dni',64,157,'EDIT',[{alumnograduacion_dni:'Z1235159T'}],'alumnograduacion_dni_nie_validate_KO'], // Las letras del nie no pertencen a ese nie
+    ['alumnograduacion','alumnograduacion_dni',65,158,'EDIT',[{alumnograduacion_dni:'1234567890'}],'alumnograduacion_dni_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',66,159,'EDIT',[{alumnograduacion_dni:'12345678Z'}],true], // Dni correcto
+    ['alumnograduacion','alumnograduacion_dni',66,160,'EDIT',[{alumnograduacion_dni:'Y7654321G'}],true], // NIE correcto
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_dni',67,161,'SEARCH',[{alumnograduacion_dni:'1234567890'}],'alumnograduacion_dni_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_dni',68,162,'SEARCH',[{alumnograduacion_dni:'123456789'}],'alumnograduacion_dni_format_KO'], // No es ni dni ni nie
+    ['alumnograduacion','alumnograduacion_dni',68,163,'SEARCH',[{alumnograduacion_dni:'12345A789'}],'alumnograduacion_dni_format_KO'], // Formato dni no valido
+    ['alumnograduacion','alumnograduacion_dni',68,164,'SEARCH',[{alumnograduacion_dni:'Z1235T597'}],'alumnograduacion_dni_format_KO'], // Formato nie no correcto
+    ['alumnograduacion','alumnograduacion_dni',69,165,'SEARCH',[{alumnograduacion_dni:'12345678A'}],'alumnograduacion_dni_dni_validate_KO'], // la letra del dni no es correcta
+    ['alumnograduacion','alumnograduacion_dni',70,166,'SEARCH',[{alumnograduacion_dni:'Z1235159T'}],'alumnograduacion_dni_nie_validate_KO'], // Las letras del nie no pertencen a ese nie
+    ['alumnograduacion','alumnograduacion_dni',71,167,'SEARCH',[{alumnograduacion_dni:'12345678Z'}],true], // Dni correcto
+    ['alumnograduacion','alumnograduacion_dni',71,168,'SEARCH',[{alumnograduacion_dni:'Y7654321G'}],true], // NIE correcto
+    ['alumnograduacion','alumnograduacion_dni',71,169,'SEARCH',[{alumnograduacion_dni:'123456'}],true], // substring dni
+    ['alumnograduacion','alumnograduacion_dni',71,170,'SEARCH',[{alumnograduacion_dni:'Y76543'}],true], // substring nie
+
+  // Campo = `alumnograduacion_telefono` varchar(9) NOT NULL DEFAULT (9 dígitos(0 - 9). Min: 9, Max: 9)
+
 );
 /*
 la entidad, 

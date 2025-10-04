@@ -94,7 +94,7 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_apellidos" ><a id="error_alumnograduacion_apellidos"></a></span>
         
         <br>
-        <label class="label_titulacion">Titulación</label>
+        <label class="label_alumnograduacion_titulacion">Titulación</label>
         <select id="alumnograduacion_titulacion" name="alumnograduacion_titulacion" onblur=" return entidad.ADD_titulacion_validation()">
             <option value=""></option>
             <option value="GREI">GREI</option>
@@ -106,9 +106,9 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_titulacion" ><a id="error_alumnograduacion_titulacion"></a></span>
         <br>
 
-        <label class="label_dni">Dni</label>
+        <label class="label_alumnograduacion_dni">Dni</label>
         <input type='text' id='alumnograduacion_dni' name='alumnograduacion_dni' onblur=" return entidad.ADD_dni_validation()"></input>
-        <span id="span_error_dni" ><a id="error_dni"></a></span>
+        <span id="span_error_alumnograduacion_dni" ><a id="error_alumnograduacion_dni"></a></span>
         
         <br>
         <label class="label_telefono">Teefono</label>
@@ -526,6 +526,79 @@ class alumnograduacion extends Validations{
 		return true;
 	}
 
+	ADD_alumnograduacion_dni_validation(){
+		let campo = "alumnograduacion_dni";
+		let devolver = campo;
+
+		if(!(this.min_size(campo,9))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		var resp = this.alumnograduacionlize_dni_nie();
+		console.log(resp);
+		if (!(resp === true)){
+			this.dom.mostrar_error_campo(campo,resp);
+			return resp;
+		}
+		
+		this.dom.mostrar_exito_campo(campo);
+		return true;
+	}
+
+	EDIT_alumnograduacion_dni_validation(){
+		let campo = "alumnograduacion_dni";
+		let devolver = campo;
+
+		if(!(this.min_size(campo,9))){
+			devolver += "_min_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		var resp = this.alumnograduacionlize_dni_nie();
+		console.log(resp);
+		if (!(resp === true)){
+			this.dom.mostrar_error_campo(campo,resp);
+			return resp;
+		}
+		
+		this.dom.mostrar_exito_campo(campo);
+		return true;
+	}
+
+	SEARCH_alumnograduacion_dni_validation(){
+		let campo = "alumnograduacion_dni";
+		let devolver = campo;
+
+		if(!(this.max_size(campo,9))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		var resp = this.alumnograduacionlize_dni_nie();
+		console.log(resp);
+		if (!(resp === true)){
+			this.dom.mostrar_error_campo(campo,resp);
+			return resp;
+		}
+		
+		this.dom.mostrar_exito_campo(campo);
+		return true;
+	}
+
 	ADD_nuevo_foto_alumnograduacion_validation(){
 
 	}
@@ -687,21 +760,23 @@ class alumnograduacion extends Validations{
 	 * */ 
 
 	alumnograduacionlize_dni_nie(){
-		
-		dni = document.getElementById('dni').value;
+		const campo = "alumnograduacion_dni";
+		let devolver = campo;
+
+		let dni = document.getElementById(campo).value;
 		if (this.alumnograduacionlize_dni_format() == true){
 			if (!(this.alumnograduacionlize_validate_dni(dni))){
-				return "dni_validate_KO";
+				return campo + "_dni_validate_KO";
 			}
 		}
 		else{
 			if (this.alumnograduacionlize_nie_format() === true){
 					if (!(this.alumnograduacionlize_validate_nie(dni))){
-						return "nie_validate_KO";
+						return campo + "_nie_validate_KO";
 					}
 			}
 			else{
-				return "dni_nie_format_KO";
+				return campo + "_format_KO";
 			}
 		}
 
@@ -716,18 +791,20 @@ class alumnograduacion extends Validations{
 	 * @returns true if dni is valid false otherwise
 	 */
 	alumnograduacionlize_dni_format(){
-		
-		if (!(this.format('dni', '[0-9]{8}[A-Z]'))){
-			this.dom.mostrar_error_campo('dni','dni_format_KO');
-			return "dni_format_KO";
+		const campo = "alumnograduacion_dni";
+		let devolver = campo;
+		if (!(this.format(campo, '[0-9]{8}[A-Z]'))){
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
 		}
 		return true;
 
 	}
 
 	alumnograduacionlize_nie_format(){
-		if (!(this.format('dni', '[XYZ][0-9]{7}[A-Z]'))){
-			this.dom.mostrar_error_campo('dni','nie_format_KO');
+		if (!(this.format('alumnograduacion_dni', '[XYZ][0-9]{7}[A-Z]'))){
+			this.dom.mostrar_error_campo('alumnograduacion_dni','nie_format_KO');
 			return "nie_format_KO";
 		}
 		return true;

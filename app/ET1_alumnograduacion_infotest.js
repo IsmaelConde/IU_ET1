@@ -150,7 +150,22 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_direccion',93,'es correcto','SEARCH',true,'alumnograduacion_direccion (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_email` varchar(40) NOT NULL DEFAULT (formato email. Max: 40)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_email',94,'vacio','ADD','alumnograduacion_email_vacio_KO','El email no puede quedar vacío'],
+    ['alumnograduacion','alumnograduacion_email',95,'cumple tamaño maximo','ADD','alumnograduacion_email_max_size_KO','Tamaño muy largo. Lo máximo son 40 caracteres'],
+    ['alumnograduacion','alumnograduacion_email',96,'cumple formato','ADD','alumnograduacion_email_format_KO','Formato incorrecto. Debe ser correo@dominio.red'],
+    ['alumnograduacion','alumnograduacion_email',97,'es correcto','ADD',true,'alumnograduacion_email (ADD) correcto'],
 
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_email',98,'vacio','EDIT','alumnograduacion_email_vacio_KO','El email no puede quedar vacío'],
+    ['alumnograduacion','alumnograduacion_email',99,'cumple tamaño maximo','EDIT','alumnograduacion_email_max_size_KO','Tamaño muy largo. Lo máximo son 40 caracteres'],
+    ['alumnograduacion','alumnograduacion_email',100,'cumple formato','EDIT','alumnograduacion_email_format_KO','Formato incorrecto. Debe ser correo@dominio.red'],
+    ['alumnograduacion','alumnograduacion_email',101,'es correcto','EDIT',true,'alumnograduacion_email (EDIT) correcto'],
+
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_email',102,'cumple tamaño maximo','SEARCH','alumnograduacion_email_max_size_KO','Tamaño muy largo. Lo máximo son 40 caracteres'],
+    ['alumnograduacion','alumnograduacion_email',103,'cumple formato','SEARCH','alumnograduacion_email_format_KO','Formato incorrecto. Debe ser correo@dominio.red'],
+    ['alumnograduacion','alumnograduacion_email',104,'es correcto','SEARCH',true,'alumnograduacion_email (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
 
@@ -172,7 +187,6 @@ let alumnograduacion_def_tests = Array(
     Array('alumnograduacion','nuevo_foto_alumnograduacion',23,'cumple tamaño maximo nombre fichero','EDIT','nuevo_foto_alumnograduacion_max_size_name_KO','el tamaño del nombre de fichero es muy grande.'),
     Array('alumnograduacion','nuevo_foto_alumnograduacion',24,'fichero ok','EDIT',true,'ok'),
 */
-    
 );
 
 let alumnograduacion_tests_fields = Array(
@@ -433,8 +447,28 @@ let alumnograduacion_tests_fields = Array(
     ['alumnograduacion','alumnograduacion_direccion',93,201,'SEARCH',[{alumnograduacion_direccion:'Ot Pe, nº2'}],true],
 
   // Campo = `alumnograduacion_email` varchar(40) NOT NULL DEFAULT (formato email. Max: 40)
+    // Action: ADD
+    ['alumnograduacion','alumnograduacion_email',94,202,'ADD',[{alumnograduacion_email:''}],'alumnograduacion_email_vacio_KO'],
+    ['alumnograduacion','alumnograduacion_email',95,203,'ADD',[{alumnograduacion_email:'a'.repeat(41)}],'alumnograduacion_email_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_email',96,204,'ADD',[{alumnograduacion_email:'correo<@dominio.es'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',96,205,'ADD',[{alumnograduacion_email:'correo@dominio'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',96,206,'ADD',[{alumnograduacion_email:'correo'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',97,207,'ADD',[{alumnograduacion_email:'correo@dominio.es'}],true],
 
+    // Action: EDIT
+    ['alumnograduacion','alumnograduacion_email',98,208,'EDIT',[{alumnograduacion_email:''}],'alumnograduacion_email_vacio_KO'],
+    ['alumnograduacion','alumnograduacion_email',99,209,'EDIT',[{alumnograduacion_email:'a'.repeat(41)}],'alumnograduacion_email_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_email',100,210,'EDIT',[{alumnograduacion_email:'correo<@dominio.es'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',100,211,'EDIT',[{alumnograduacion_email:'correo@dominio'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',100,212,'EDIT',[{alumnograduacion_email:'correo'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',101,213,'EDIT',[{alumnograduacion_email:'correo@dominio.es'}],true],
 
+    // Action: SEARCH
+    ['alumnograduacion','alumnograduacion_email',102,214,'SEARCH',[{alumnograduacion_email:'a'.repeat(41)}],'alumnograduacion_email_max_size_KO'],
+    ['alumnograduacion','alumnograduacion_email',103,215,'SEARCH',[{alumnograduacion_email:'correo<@dominio.es'}],'alumnograduacion_email_format_KO'],
+    ['alumnograduacion','alumnograduacion_email',104,216,'SEARCH',[{alumnograduacion_email:'correo@dominio'}],true],
+    ['alumnograduacion','alumnograduacion_email',104,217,'SEARCH',[{alumnograduacion_email:'correo'}],true],
+    ['alumnograduacion','alumnograduacion_email',104,218,'SEARCH',[{alumnograduacion_email:'correo@dominio.es'}],true],
 
   // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
 );  

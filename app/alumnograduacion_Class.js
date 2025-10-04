@@ -121,9 +121,9 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_direccion" ><a id="error_alumnograduacion_direccion"></a></span>
 
         <br>
-        <label class="label_email">Email</label>
+        <label class="label_alumnograduacion_email">Email</label>
         <input type='text' id='alumnograduacion_email' name='alumnograduacion_email' onblur=" return entidad.ADD_email_validation()"></input>
-        <span id="span_error_email" ><a id="error_email"></a></span>
+        <span id="span_error_alumnograduacion_email" ><a id="error_alumnograduacion_email"></a></span>
         
         <br>
         <label id="label_fotoacto" class="label_fotoacto">Fotoacto</label>
@@ -719,7 +719,7 @@ class alumnograduacion extends Validations{
 	SEARCH_alumnograduacion_direccion_validation(){
 		let campo = "alumnograduacion_direccion";
 		let devolver = campo;
-		
+
 		if(!(this.max_size(campo,100))){
 			devolver += "_max_size_KO";
 			this.dom.mostrar_error_campo(campo,devolver);
@@ -727,6 +727,78 @@ class alumnograduacion extends Validations{
 		}
 
 		if(this.format(campo,/[<>{}\[\]\(\)"'`~^|\\\/*=+%$€@!?;:_]/)){ // Por si contiene < > { } [ ] ( ) " ' ` ~ ^ | \ / * = + % $ € @ ! ? ; : _
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	ADD_alumnograduacion_email_validation(){
+		let campo = "alumnograduacion_email";
+		let devolver = campo;
+
+		if(this.format(campo,/^\s*$/)){ // Por si está vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,40))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!(this.format(campo,/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/))){ // Formato correo
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	EDIT_alumnograduacion_email_validation(){
+		let campo = "alumnograduacion_email";
+		let devolver = campo;
+
+		if(this.format(campo,/^\s*$/)){ // Por si está vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,40))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(!(this.format(campo,/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/))){ // Formato correo
+			devolver += "_format_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		
+		return true;
+	}
+
+	SEARCH_alumnograduacion_email_validation(){
+		let campo = "alumnograduacion_email";
+		let devolver = campo;
+
+		if(this.format(campo,/^\s*$/)){ // Por si está vacío
+			devolver += "_vacio_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+		if(!(this.max_size(campo,40))){
+			devolver += "_max_size_KO";
+			this.dom.mostrar_error_campo(campo,devolver);
+			return devolver;
+		}
+
+		if(this.format(campo,/[<>{}\[\]\(\)"'`~^|\\/*=%$€!?,;:&#¬ºª\s]|(\.{2,})|(--+)|(@{2,})|(^[.-])|([.-]@)|(@[.-])/)){ // Si contiene uno de estos parametros, ya está buscando mal
 			devolver += "_format_KO";
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;

@@ -807,8 +807,25 @@ class alumnograduacion extends Validations{
 		return true;
 	}
 
-	ADD_nuevo_foto_alumnograduacion_validation(){
+	ADD_alumnograduacion_fotoacto_validation(){
+		let campo = "alumnograduacion_nuevo_fotoacto";
+		let devolver = campo;
 
+		return true;
+	}
+
+	EDIT_alumnograduacion_fotoacto_validation(){
+		let campo = "alumnograduacion_nuevo_fotoacto";
+		let devolver = campo;
+
+		return true;
+	}
+
+	SEARCH_alumnograduacion_fotoacto_validation(){
+		let campo = "alumnograduacion_nuevo_fotoacto";
+		let devolver = campo;
+
+		return true;
 	}
 
 	/** Antiguo de aquí pa bajo

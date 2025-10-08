@@ -495,7 +495,7 @@ let alumnograduacion_tests_files = Array(
   // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
     // Action: ADD
     ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',105,1,'ADD','empty_file',[],'alumnograduacion_fotoacto_empty_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',106,2,'ADD','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_max_size_KO'], // El js de test está programado para que funcione así
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',106,2,'ADD','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_max_size_KO'], // El js de test está programado para que funcione así [{},{},...]
     ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,3,'ADD','format_name_file',[{format_name_file: 'nombre.mp4'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
     ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,4,'ADD','format_name_file',[{format_name_file: 'nombre.mp3'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
     ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,5,'ADD','format_name_file',[{format_name_file: 'nombre.webm'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],

@@ -2,11 +2,11 @@ let alumnograduacion_def_tests = Array(
     
   // Campo = `alumnograduacion_login` varchar(15) NOT NULL DEFAULT (min: 4, max: 15)
     // Action: ADD
-    Array('alumnograduacion','alumnograduacion_login',1,'cumple tamaño minimo','ADD','alumnograduacion_login_min_size_KO','Tamaño muy corto. Debe estar entre 4 y 15 caracteres'),
+    ['alumnograduacion','alumnograduacion_login',1,'cumple tamaño minimo','ADD','alumnograduacion_login_min_size_KO','Tamaño muy corto. Debe estar entre 4 y 15 caracteres'],
     ['alumnograduacion', 'alumnograduacion_login',2,'no contiene espacios','ADD', 'alumnograduacion_login_space_KO', 'No se permite espacios'],
-    Array('alumnograduacion','alumnograduacion_login',3,'cumple tamaño maximo','ADD','alumnograduacion_login_max_size_KO','Tamaño muy grande. Debe estar entre 4 y 15 caracteres'),
-    Array('alumnograduacion','alumnograduacion_login',4,'cumple formato','ADD','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_login',5,'es correcto','ADD',true,'alumnograduacion_login (ADD) correcto'),
+    ['alumnograduacion','alumnograduacion_login',3,'cumple tamaño maximo','ADD','alumnograduacion_login_max_size_KO','Tamaño muy grande. Debe estar entre 4 y 15 caracteres'],
+    ['alumnograduacion','alumnograduacion_login',4,'cumple formato','ADD','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'],
+    ['alumnograduacion','alumnograduacion_login',5,'es correcto','ADD',true,'alumnograduacion_login (ADD) correcto'],
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_login',6,'cumple tamaño minimo','EDIT','alumnograduacion_login_min_size_KO','Tamaño muy corto. Debe estar entre 4 y 15 caracteres'],
@@ -16,16 +16,16 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_login',10,'es correcto','EDIT',true,'alumnograduacion_login (EDIT) correcto'],
 
     // Action: SEARCH
-    Array('alumnograduacion','alumnograduacion_login',11,'cumple tamaño maximo','SEARCH','alumnograduacion_login_max_size_KO','Tamaño muy grande. Como máximo 15 caracteres'),
-    Array('alumnograduacion','alumnograduacion_login',12,'cumple formato','SEARCH','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_login',13,'es correcto','SEARCH',true,'alumnograduacion_login (SEARCH) correcto'),
+    ['alumnograduacion','alumnograduacion_login',11,'cumple tamaño maximo','SEARCH','alumnograduacion_login_max_size_KO','Tamaño muy grande. Como máximo 15 caracteres'],
+    ['alumnograduacion','alumnograduacion_login',12,'cumple formato','SEARCH','alumnograduacion_login_format_KO','Formato inválido. Debe contener alfabéticos sin acentos ni ñ'],
+    ['alumnograduacion','alumnograduacion_login',13,'es correcto','SEARCH',true,'alumnograduacion_login (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_password` varchar(64) NOT NULL DEFAULT (min: 8, max: 64)
     // Action: ADD
-    Array('alumnograduacion','alumnograduacion_password',14,'cumple tamaño minimo','ADD','alumnograduacion_password_min_size_KO','Tamaño muy corto. Debe estar entre 8 y 64 caracteres'),
-    Array('alumnograduacion','alumnograduacion_password',15,'cumple tamaño maximo','ADD','alumnograduacion_password_max_size_KO','Tamaño muy grande. Debe estar entre 8 y 64 caracteres'),
-    Array('alumnograduacion','alumnograduacion_password',16,'cumple formato','ADD','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_password',17,'es correcto','ADD',true,'alumnograduacion_password (ADD) correcto'),
+    ['alumnograduacion','alumnograduacion_password',14,'cumple tamaño minimo','ADD','alumnograduacion_password_min_size_KO','Tamaño muy corto. Debe estar entre 8 y 64 caracteres'],
+    ['alumnograduacion','alumnograduacion_password',15,'cumple tamaño maximo','ADD','alumnograduacion_password_max_size_KO','Tamaño muy grande. Debe estar entre 8 y 64 caracteres'],
+    ['alumnograduacion','alumnograduacion_password',16,'cumple formato','ADD','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'],
+    ['alumnograduacion','alumnograduacion_password',17,'es correcto','ADD',true,'alumnograduacion_password (ADD) correcto'],
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_password',18,'cumple tamaño minimo','EDIT','alumnograduacion_password_min_size_KO','Tamaño muy corto. Debe estar entre 8 y 64 caracteres'],
@@ -34,16 +34,16 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_password',21,'es correcto','EDIT',true,'alumnograduacion_password (EDIT) correcto'],
 
     // Action: SEARCH
-    Array('alumnograduacion','alumnograduacion_password',22,'cumple tamaño maximo','SEARCH','alumnograduacion_password_max_size_KO','Tamaño muy grande. Como máximo 64 caracteres'),
-    Array('alumnograduacion','alumnograduacion_password',23,'cumple formato','SEARCH','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'),
-    Array('alumnograduacion','alumnograduacion_password',24,'es correcto','SEARCH',true,'alumnograduacion_password (SEARCH) correcto'),
+    ['alumnograduacion','alumnograduacion_password',22,'cumple tamaño maximo','SEARCH','alumnograduacion_password_max_size_KO','Tamaño muy grande. Como máximo 64 caracteres'],
+    ['alumnograduacion','alumnograduacion_password',23,'cumple formato','SEARCH','alumnograduacion_password_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios) sin acentos ni ñ'],
+    ['alumnograduacion','alumnograduacion_password',24,'es correcto','SEARCH',true,'alumnograduacion_password (SEARCH) correcto'],
   
   // Campo = `alumnograduacion_nombre` varchar(25) NOT NULL DEFAULT (min: 2, max: 25)
     // Action: ADD
-    Array('alumnograduacion','alumnograduacion_nombre',25,'cumple tamaño minimo','ADD','alumnograduacion_nombre_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 25 caracteres'),
-    Array('alumnograduacion','alumnograduacion_nombre',26,'cumple tamaño maximo','ADD','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 25 caracteres'),
-    Array('alumnograduacion','alumnograduacion_nombre',27,'cumple formato','ADD','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_nombre',28,'es correcto','ADD',true,'alumnograduacion_nombre (ADD) correcto'),
+    ['alumnograduacion','alumnograduacion_nombre',25,'cumple tamaño minimo','ADD','alumnograduacion_nombre_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 25 caracteres'],
+    ['alumnograduacion','alumnograduacion_nombre',26,'cumple tamaño maximo','ADD','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 25 caracteres'],
+    ['alumnograduacion','alumnograduacion_nombre',27,'cumple formato','ADD','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
+    ['alumnograduacion','alumnograduacion_nombre',28,'es correcto','ADD',true,'alumnograduacion_nombre (ADD) correcto'],
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_nombre',29,'cumple tamaño minimo','EDIT','alumnograduacion_nombre_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 25 caracteres'],
@@ -52,16 +52,16 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_nombre',32,'es correcto','EDIT',true,'alumnograduacion_nombre (EDIT) correcto'],
 
     // Action: SEARCH
-    Array('alumnograduacion','alumnograduacion_nombre',33,'cumple tamaño maximo','SEARCH','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Como máximo 25 caracteres'),
-    Array('alumnograduacion','alumnograduacion_nombre',34,'cumple formato','SEARCH','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_nombre',35,'es correcto','SEARCH',true,'alumnograduacion_nombre (SEARCH) correcto'),
+    ['alumnograduacion','alumnograduacion_nombre',33,'cumple tamaño maximo','SEARCH','alumnograduacion_nombre_max_size_KO','Tamaño muy grande. Como máximo 25 caracteres'],
+    ['alumnograduacion','alumnograduacion_nombre',34,'cumple formato','SEARCH','alumnograduacion_nombre_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
+    ['alumnograduacion','alumnograduacion_nombre',35,'es correcto','SEARCH',true,'alumnograduacion_nombre (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_apellidos` varchar(35) NOT NULL DEFAULT (min: 2, max: 35)
     // Action: ADD
-    Array('alumnograduacion','alumnograduacion_apellidos',36,'cumple tamaño minimo','ADD','alumnograduacion_apellidos_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 35 caracteres'),
-    Array('alumnograduacion','alumnograduacion_apellidos',37,'cumple tamaño maximo','ADD','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 35 caracteres'),
-    Array('alumnograduacion','alumnograduacion_apellidos',38,'cumple formato','ADD','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_apellidos',39,'es correcto','ADD',true,'alumnograduacion_apellidos (ADD) correcto'),
+    ['alumnograduacion','alumnograduacion_apellidos',36,'cumple tamaño minimo','ADD','alumnograduacion_apellidos_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 35 caracteres'],
+    ['alumnograduacion','alumnograduacion_apellidos',37,'cumple tamaño maximo','ADD','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Debe estar entre 2 y 35 caracteres'],
+    ['alumnograduacion','alumnograduacion_apellidos',38,'cumple formato','ADD','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
+    ['alumnograduacion','alumnograduacion_apellidos',39,'es correcto','ADD',true,'alumnograduacion_apellidos (ADD) correcto'],
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_apellidos',40,'cumple tamaño minimo','EDIT','alumnograduacion_apellidos_min_size_KO','Tamaño muy corto. Debe estar entre 2 y 35 caracteres'],
@@ -70,15 +70,15 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_apellidos',43,'es correcto','EDIT',true,'alumnograduacion_apellidos (EDIT) correcto'],
 
     // Action: SEARCH
-    Array('alumnograduacion','alumnograduacion_apellidos',44,'cumple tamaño maximo','SEARCH','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Como máximo 35 caracteres'),
-    Array('alumnograduacion','alumnograduacion_apellidos',45,'cumple formato','SEARCH','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'),
-    Array('alumnograduacion','alumnograduacion_apellidos',46,'es correcto','SEARCH',true,'alumnograduacion_apellidos (SEARCH) correcto'),
+    ['alumnograduacion','alumnograduacion_apellidos',44,'cumple tamaño maximo','SEARCH','alumnograduacion_apellidos_max_size_KO','Tamaño muy grande. Como máximo 35 caracteres'],
+    ['alumnograduacion','alumnograduacion_apellidos',45,'cumple formato','SEARCH','alumnograduacion_apellidos_format_KO','Formato inválido. Debe contener alfabéticos (se permite espacios, acentos y ñ)'],
+    ['alumnograduacion','alumnograduacion_apellidos',46,'es correcto','SEARCH',true,'alumnograduacion_apellidos (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_titulacion` enum('GREI','GRIA','MEI','MIA','PCEO') NOT NULL DEFAULT 'GREI'
     // Action: ADD
-    Array('alumnograduacion','alumnograduacion_titulacion',47,'vacio','ADD','alumnograduacion_titulacion_vacio_KO','No puede estar vacío'),
-    Array('alumnograduacion','alumnograduacion_titulacion',48,'cumple formato','ADD','alumnograduacion_titulacion_format_KO','Formatos válidos: "GREI", "GRIA", "MEI", "MIA", "PCEO"'),
-    Array('alumnograduacion','alumnograduacion_titulacion',49,'es correcto','ADD',true,'alumnograduacion_titulacion (ADD) correcto'),
+    ['alumnograduacion','alumnograduacion_titulacion',47,'vacio','ADD','alumnograduacion_titulacion_vacio_KO','No puede estar vacío'],
+    ['alumnograduacion','alumnograduacion_titulacion',48,'cumple formato','ADD','alumnograduacion_titulacion_format_KO','Formatos válidos: "GREI", "GRIA", "MEI", "MIA", "PCEO"'],
+    ['alumnograduacion','alumnograduacion_titulacion',49,'es correcto','ADD',true,'alumnograduacion_titulacion (ADD) correcto'],
 
     // Action: EDIT
     ['alumnograduacion','alumnograduacion_titulacion',50,'vacio','EDIT','alumnograduacion_titulacion_vacio_KO','No puede estar vacío'],
@@ -86,8 +86,8 @@ let alumnograduacion_def_tests = Array(
     ['alumnograduacion','alumnograduacion_titulacion',52,'es correcto','EDIT',true,'alumnograduacion_titulacion (EDIT) correcto'],
 
     // Action: SEARCH
-    Array('alumnograduacion','alumnograduacion_titulacion',53,'cumple tamaño maximo','SEARCH','alumnograduacion_titulacion_max_size_KO','Tamaño muy grande. El máximo es 4'),
-    Array('alumnograduacion','alumnograduacion_titulacion',54,'es correcto','SEARCH',true,'alumnograduacion_titulacion (SEARCH) correcto'),
+    ['alumnograduacion','alumnograduacion_titulacion',53,'cumple tamaño maximo','SEARCH','alumnograduacion_titulacion_max_size_KO','Tamaño muy grande. El máximo es 4'],
+    ['alumnograduacion','alumnograduacion_titulacion',54,'es correcto','SEARCH',true,'alumnograduacion_titulacion (SEARCH) correcto'],
 
   // Campo = `alumnograduacion_dni` varchar(9) NOT NULL DEFAULT (formato dni. Min: 9, Max: 9)
     // Action: ADD
@@ -470,6 +470,16 @@ let alumnograduacion_tests_fields = Array(
     ['alumnograduacion','alumnograduacion_email',104,216,'SEARCH',[{alumnograduacion_email:'correo@dominio'}],true],
     ['alumnograduacion','alumnograduacion_email',104,217,'SEARCH',[{alumnograduacion_email:'correo'}],true],
     ['alumnograduacion','alumnograduacion_email',104,218,'SEARCH',[{alumnograduacion_email:'correo@dominio.es'}],true],
+
+  // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
+    // Action: SEARCH
+    ['alumnograduacion', 'alumnograduacion_fotoacto',117,219,'SEARCH',[{alumnograduacion_fotoacto: 'a'.repeat(40).concat('.jpg')}],'alumnograduacion_fotoacto_max_size_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',118,220,'SEARCH',[{alumnograduacion_fotoacto: 'ahí'}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',118,221,'SEARCH',[{alumnograduacion_fotoacto: 'isma conde.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',118,222,'SEARCH',[{alumnograduacion_fotoacto: 'españa.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',118,223,'SEARCH',[{alumnograduacion_fotoacto: 'nombre3.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',118,224,'SEARCH',[{alumnograduacion_fotoacto: '.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_fotoacto',119,225,'SEARCH',[{alumnograduacion_fotoacto: 'foto.jpg'}],true],
 );  
 /*
 la entidad, 
@@ -484,64 +494,50 @@ el codigo asociado de error/valor true de exito
 let alumnograduacion_tests_files = Array(
   // Campo = `alumnograduacion_fotoacto` varchar(40) NOT NULL DEFAULT (alfabéticos (sin acentos y ñ ni espacios) y ".". Min: 7, Max: 40)
     // Action: ADD
-    ['alumnograduacion','alumnograduacion_fotoacto',105,1,'ADD','empty_file',[],'alumnograduacion_fotoacto_empty_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',106,2,'ADD','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')}],'alumnograduacion_fotoacto_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,3,'ADD','format_name_file',[{format_name_file: 'nombre.mp4'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,4,'ADD','format_name_file',[{format_name_file: 'nombre.mp3'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,5,'ADD','format_name_file',[{format_name_file: 'nombre.webm'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,6,'ADD','format_name_file',[{format_name_file: 'nombre.ogg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,7,'ADD','format_name_file',[{format_name_file: 'nombre.wav'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,8,'ADD','format_name_file',[{format_name_file: 'nombre.css'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,9,'ADD','format_name_file',[{format_name_file: 'isma conde.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,10,'ADD','format_name_file',[{format_name_file: 'españa.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,11,'ADD','format_name_file',[{format_name_file: 'nombre3.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',107,12,'ADD','format_name_file',[{format_name_file: '.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,13,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'video/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,14,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'audio/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,15,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'text/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,16,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'application/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,17,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/png'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,18,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/gif'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,19,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/webp'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',108,20,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/svg+xml'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',109,21,'ADD','max_size_file',[{format_name_file: 'foto.jpg', type_file: 'image/jpeg', max_size_file:2000000001}],'alumnograduacion_fotoacto_max_size_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',110,22,'ADD','fichero ok',[{format_name_file: 'foto.jpg', type_file: 'image/*', max_size_file:20000}],true],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',105,1,'ADD','empty_file',[],'alumnograduacion_fotoacto_empty_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',106,2,'ADD','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_max_size_KO'], // El js de test está programado para que funcione así
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,3,'ADD','format_name_file',[{format_name_file: 'nombre.mp4'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,4,'ADD','format_name_file',[{format_name_file: 'nombre.mp3'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,5,'ADD','format_name_file',[{format_name_file: 'nombre.webm'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,6,'ADD','format_name_file',[{format_name_file: 'nombre.ogg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,7,'ADD','format_name_file',[{format_name_file: 'ahí'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,8,'ADD','format_name_file',[{format_name_file: 'noFormato'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,9,'ADD','format_name_file',[{format_name_file: 'isma conde.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,10,'ADD','format_name_file',[{format_name_file: 'españa.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,11,'ADD','format_name_file',[{format_name_file: 'nombre3.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',107,12,'ADD','format_name_file',[{format_name_file: '.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,13,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'video/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,14,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'audio/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,15,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'text/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,16,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'application/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,17,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/png'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,18,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/gif'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,19,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/webp'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',108,20,'ADD','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/svg+xml'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',109,21,'ADD','max_size_file',[{format_name_file: 'foto.jpg'},{type_file: 'image/jpeg'}, {max_size_file:2000000001}],'alumnograduacion_fotoacto_max_size_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',110,22,'ADD','fichero ok',[{format_name_file: 'foto.jpg'}, {type_file: 'image/jpeg'},{max_size_file:20000}],true],
 
     // Action: EDIT
-    ['alumnograduacion','alumnograduacion_fotoacto',111,23,'EDIT','empty_file',[],'alumnograduacion_fotoacto_empty_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',112,24,'EDIT','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')}],'alumnograduacion_fotoacto_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,25,'EDIT','format_name_file',[{format_name_file: 'nombre.mp4'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,26,'EDIT','format_name_file',[{format_name_file: 'nombre.mp3'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,27,'EDIT','format_name_file',[{format_name_file: 'nombre.webm'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,28,'EDIT','format_name_file',[{format_name_file: 'nombre.ogg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,29,'EDIT','format_name_file',[{format_name_file: 'nombre.wav'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,30,'EDIT','format_name_file',[{format_name_file: 'nombre.css'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,31,'EDIT','format_name_file',[{format_name_file: 'isma conde.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,32,'EDIT','format_name_file',[{format_name_file: 'españa.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,33,'EDIT','format_name_file',[{format_name_file: 'nombre3.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',113,34,'EDIT','format_name_file',[{format_name_file: '.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,35,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'video/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,36,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'audio/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,37,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'text/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,38,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'application/*'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,39,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/png'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,40,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/gif'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,41,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/webp'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',114,42,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/svg+xml'}],'alumnograduacion_fotoacto_type_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',115,43,'EDIT','max_size_file',[{format_name_file: 'foto.jpg', type_file: 'image/jpeg', max_size_file:2000000001}],'alumnograduacion_fotoacto_max_size_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',116,44,'EDIT','fichero ok',[{format_name_file: 'foto.jpg', type_file: 'image/*', max_size_file:20000}],true],
-
-    // Action: SEARCH
-    ['alumnograduacion', 'alumnograduacion_fotoacto',117,45,'SEARCH','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')}],'alumnograduacion_fotoacto_max_size_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,46,'SEARCH','format_name_file',[{format_name_file: 'nombre.mp4'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,47,'SEARCH','format_name_file',[{format_name_file: 'nombre.mp3'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,48,'SEARCH','format_name_file',[{format_name_file: 'nombre.webm'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,49,'SEARCH','format_name_file',[{format_name_file: 'nombre.ogg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,50,'SEARCH','format_name_file',[{format_name_file: 'nombre.wav'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,51,'SEARCH','format_name_file',[{format_name_file: 'nombre.css'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,52,'SEARCH','format_name_file',[{format_name_file: 'isma conde.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,53,'SEARCH','format_name_file',[{format_name_file: 'españa.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,54,'SEARCH','format_name_file',[{format_name_file: 'nombre3.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',118,55,'SEARCH','format_name_file',[{format_name_file: '.jpg'}],'alumnograduacion_fotoacto_format_name_file_KO'],
-    ['alumnograduacion', 'alumnograduacion_fotoacto',119,56,'SEARCH','fichero ok',[{format_name_file: 'foto.jpg'}],true],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',111,23,'EDIT','empty_file',[],'alumnograduacion_fotoacto_empty_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',112,24,'EDIT','format_name_file',[{format_name_file: 'a'.repeat(40).concat('.jpg')},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_max_size_KO'], // El js de test está programado para que funcione así
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,25,'EDIT','format_name_file',[{format_name_file: 'nombre.mp4'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,26,'EDIT','format_name_file',[{format_name_file: 'nombre.mp3'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,27,'EDIT','format_name_file',[{format_name_file: 'nombre.webm'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,28,'EDIT','format_name_file',[{format_name_file: 'nombre.ogg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,29,'EDIT','format_name_file',[{format_name_file: 'ahí'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,30,'EDIT','format_name_file',[{format_name_file: 'noFormato'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,31,'EDIT','format_name_file',[{format_name_file: 'isma conde.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,32,'EDIT','format_name_file',[{format_name_file: 'españa.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,33,'EDIT','format_name_file',[{format_name_file: 'nombre3.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',113,34,'EDIT','format_name_file',[{format_name_file: '.jpg'},{type_file: 'image/jpeg'}, {max_size_file:200000}],'alumnograduacion_fotoacto_format_name_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,35,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'video/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,36,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'audio/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,37,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'text/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,38,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'application/*'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,39,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/png'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,40,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/gif'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,41,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/webp'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',114,42,'EDIT','type_file',[{format_name_file: 'foto.jpg'}, {type_file: 'image/svg+xml'}, {max_size_file:200000}],'alumnograduacion_fotoacto_type_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',115,43,'EDIT','max_size_file',[{format_name_file: 'foto.jpg'},{type_file: 'image/jpeg'}, {max_size_file:2000000001}],'alumnograduacion_fotoacto_max_size_file_KO'],
+    ['alumnograduacion', 'alumnograduacion_nuevo_fotoacto',116,44,'EDIT','fichero ok',[{format_name_file: 'foto.jpg'}, {type_file: 'image/jpeg'},{max_size_file:20000}],true],
 );

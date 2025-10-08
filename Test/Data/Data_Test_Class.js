@@ -94,6 +94,8 @@ class Data_Test {
                 
                     var nombrecampo = clave;
                     var valorcampo = pruebas[i][5][j][nombrecampo];
+
+                    //console.log(pruebas[i]);
                     
                     document.getElementById(nombrecampo).value = valorcampo;
 
@@ -200,11 +202,16 @@ class Data_Test {
             if (pruebas[i][6].length != 0){
                               
                 var nombrefichero = pruebas[i][6][0].format_name_file;
+
+                console.log(pruebas[i][6]);
+
                 var tipomime = pruebas[i][6][1].type_file;
-                var maxsize = pruebas[i][6][2].max_size_file;   
+                var maxsize = pruebas[i][6][2].max_size_file;
 
 
                 var file = new File([new ArrayBuffer(maxsize)], nombrefichero ,{type:tipomime, webkitRelativePath:"C:\\fakepath\\"+nombrefichero});
+
+                console.log(file);
                 
                 // Create a data transfer object. Similar to what you get from a `drop` event as `event.dataTransfer`
                 const dataTransfer = new DataTransfer();

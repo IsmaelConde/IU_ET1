@@ -126,14 +126,14 @@ class alumnograduacion extends Validations{
         <span id="span_error_alumnograduacion_email" ><a id="error_alumnograduacion_email"></a></span>
         
         <br>
-        <label id="label_fotoacto" class="label_fotoacto">Fotoacto</label>
+        <label id="label_alumnograduacion_fotoacto" class="label_alumnograduacion_fotoacto">Fotoacto</label>
         <input type='text' id='alumnograduacion_fotoacto' name='alumnograduacion_fotoacto'></input>
-        <span id="span_error_fotoacto"><a id="error_fotoacto"></a></span>
-        <a id="link_fotoacto" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/"><img src="./iconos/FILE.png" /></a>
+        <span id="span_error_alumnograduacion_fotoacto"><a id="error_alumnograduacion_fotoacto"></a></span>
+        <a id="link_alumnograduacion_fotoacto" href="http://193.147.87.202/ET2/filesuploaded/files_foto_persona/"><img src="./iconos/FILE.png" /></a>
         
-        <label id="label_nuevo_fotoacto" class="label_nuevo_fotoacto">Nueva Fotoacto</label>
+        <label id="label_alumnograduacion_nuevo_fotoacto" class="label_alumnograduacion_nuevo_fotoacto">Nueva Fotoacto</label>
         <input type='file' id='alumnograduacion_nuevo_fotoacto' name='alumnograduacion_nuevo_fotoacto' onblur="entidad.ADD_fotoacto_validation()"></input>
-        <span id="span_error_nuevo_fotoacto"><a id="error_nuevo_fotoacto"></a></span>
+        <span id="span_error_alumnograduacion_nuevo_fotoacto"><a id="error_alumnograduacion_nuevo_fotoacto"></a></span>
         <br>
 
         <input id="submit_button" type="submit" value="Submit">
@@ -517,7 +517,7 @@ class alumnograduacion extends Validations{
 		}
 
 		const valoresPosibles = ["GREI", "GRIA", "MEI", "MIA", "PCEO"];
-		if(!this.format(campo, new RegExp(valoresPosibles.join("|"), "i"))){ // Si no contiene esos valores, no es sensible a mayusculas
+		if(!this.format(campo, new RegExp(valoresPosibles.join("|"), "i"))){ // Si no contiene esos valores, es sensible a mayusculas
 			devolver += "_format_KO";
 			this.dom.mostrar_error_campo(campo,devolver);
 			return devolver;
@@ -807,21 +807,21 @@ class alumnograduacion extends Validations{
 		return true;
 	}
 
-	ADD_alumnograduacion_fotoacto_validation(){
-		let campo = "alumnograduacion_nuevo_fotoacto";
-		let devolver = campo;
-
-		return true;
-	}
-
-	EDIT_alumnograduacion_fotoacto_validation(){
-		let campo = "alumnograduacion_nuevo_fotoacto";
-		let devolver = campo;
-
-		return true;
-	}
-
 	SEARCH_alumnograduacion_fotoacto_validation(){
+		let campo = "alumnograduacion_fotoacto";
+		let devolver = campo;
+
+		return true;
+	}
+
+	ADD_alumnograduacion_nuevo_fotoacto_validation(){
+		let campo = "alumnograduacion_nuevo_fotoacto";
+		let devolver = campo;
+
+		return true;
+	}
+
+	EDIT_alumnograduacion_nuevo_fotoacto_validation(){
 		let campo = "alumnograduacion_nuevo_fotoacto";
 		let devolver = campo;
 
